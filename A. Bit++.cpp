@@ -5,8 +5,6 @@
 #include <algorithm>
 #include <cstdlib>
 #include <stdio.h>
-#include <list>
-#include <math.h>
 using namespace std;
 #define ll long long int
 #define pll pair<ll, ll>
@@ -33,6 +31,25 @@ using namespace std;
 
 int main()
 {
+    int t, x = 0;
+    get(t);
+
+    while (t--)
+    {
+        string s;
+        get(s);
+        if (s == "X++")
+            x++;
+        if (s == "++X")
+            ++x;
+        if (s == "X--")
+            x--;
+        if (s == "--X")
+            --x;
+    }
+
+    cout << x;
+
     fastaf;
     return 0;
 }

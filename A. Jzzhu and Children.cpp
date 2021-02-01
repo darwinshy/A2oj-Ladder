@@ -34,5 +34,20 @@ using namespace std;
 int main()
 {
     fastaf;
+    double n, m, max(0), last, t;
+    get(n);
+    get(m);
+
+    for (int i = 1; i <= n; i++)
+    {
+        cin >> t;
+        if (ceil(t / m) >= max)
+        {
+            last = i;
+            max = ceil(t / m);
+        }
+    }
+    cout << last;
+
     return 0;
 }

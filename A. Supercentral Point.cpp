@@ -34,5 +34,39 @@ using namespace std;
 int main()
 {
     fastaf;
+    int t, res = 0;
+    get(t);
+
+    int *ax = new int[t * sizeof(int)];
+    int *ay = new int[t * sizeof(int)];
+
+    fora(i, t)
+
+    {
+        int x, y;
+        cin >> x >> y;
+        ax[i] = x;
+        ay[i] = y;
+    }
+
+    fora(i, t)
+    {
+        int m = 0, n = 0, o = 0, p = 0;
+
+        fora(j, t) if (i != j)
+        {
+            if (ax[j] > ax[i] && ay[j] == ay[i])
+                m = 1;
+            if (ax[j] < ax[i] && ay[j] == ay[i])
+                n = 1;
+            if (ax[j] == ax[i] && ay[j] < ay[i])
+                o = 1;
+            if (ax[j] == ax[i] && ay[j] > ay[i])
+                p = 1;
+        }
+        if (m == 1 && n == 1 && o == 1 && p == 1)
+            res++;
+    }
+    cout << res;
     return 0;
 }

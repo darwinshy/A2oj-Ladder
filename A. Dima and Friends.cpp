@@ -5,8 +5,6 @@
 #include <algorithm>
 #include <cstdlib>
 #include <stdio.h>
-#include <list>
-#include <math.h>
 using namespace std;
 #define ll long long int
 #define pll pair<ll, ll>
@@ -34,5 +32,21 @@ using namespace std;
 int main()
 {
     fastaf;
+    int t, f, sum = 0, res = 0;
+    get(t);
+    f = t + 1;
+
+    while (t--)
+    {
+        int x;
+        get(x);
+        sum = sum + x;
+    }
+
+    forab(i, 1, 6) if ((sum + i) % f != 1)
+        res++;
+
+    cout << res;
+
     return 0;
 }
