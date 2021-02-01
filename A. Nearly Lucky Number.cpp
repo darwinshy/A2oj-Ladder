@@ -32,5 +32,16 @@ using namespace std;
 int main()
 {
     fastaf;
+    string input;
+    int lucky = 0;
+    get(input);
+    fora(i, input.length()) if (input[i] == '4' || input[i] == '7')
+        lucky++;
+
+    if (lucky != 4 && lucky != 7)
+        NO;
+    else
+        YES;
+
     return 0;
 }

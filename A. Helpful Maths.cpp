@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <cstdlib>
 #include <stdio.h>
+
 using namespace std;
 #define ll long long int
 #define pll pair<ll, ll>
@@ -32,5 +33,23 @@ using namespace std;
 int main()
 {
     fastaf;
+    string sum, res;
+    vector<char> ordered;
+    get(sum);
+
+    fora(i, sum.length()) if (sum[i] != '+')
+        ordered.push_back(sum[i]);
+
+    sort(ordered.begin(), ordered.end());
+
+    for (char it : ordered)
+        res.push_back(it);
+
+    fora(i, res.length()) if (i != res.length() - 1)
+            cout
+        << res[i] << "+";
+    else cout
+        << res[i];
+
     return 0;
 }

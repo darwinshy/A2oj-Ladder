@@ -32,5 +32,19 @@ using namespace std;
 int main()
 {
     fastaf;
+    int t;
+    get(t);
+    while (t--)
+    {
+        string lt;
+        get(lt);
+        int l = lt.length();
+
+        if (l <= 10)
+            cout << lt << "\n";
+        else
+            cout << lt[0] << l - 2 << lt[l - 1] << "\n";
+    }
+
     return 0;
 }

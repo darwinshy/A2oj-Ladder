@@ -11,8 +11,6 @@ using namespace std;
 #define pii pair<int, int>
 #define yes cout << "Yes" << endl
 #define no cout << "No" << endl
-#define YES cout << "YES" << endl
-#define NO cout << "NO" << endl
 #define get(a) cin >> a
 #define getn(a, n)              \
     for (int i = 0; i < n; i++) \
@@ -32,5 +30,26 @@ using namespace std;
 int main()
 {
     fastaf;
+    string text;
+    get(text);
+    int length = text.length(), upper = 0, lower = 0;
+
+    for (int i = 0; i < length; i++)
+    {
+        if (isupper(text[i]))
+            upper++;
+        if (islower(text[i]))
+            lower++;
+    }
+
+    if (upper <= lower)
+        for (int i = 0; i < length; i++)
+            text[i] = tolower(text[i]);
+    else
+        for (int i = 0; i < length; i++)
+            text[i] = toupper(text[i]);
+
+    cout << text;
+
     return 0;
 }

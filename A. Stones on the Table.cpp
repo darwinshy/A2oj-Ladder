@@ -11,8 +11,6 @@ using namespace std;
 #define pii pair<int, int>
 #define yes cout << "Yes" << endl
 #define no cout << "No" << endl
-#define YES cout << "YES" << endl
-#define NO cout << "NO" << endl
 #define get(a) cin >> a
 #define getn(a, n)              \
     for (int i = 0; i < n; i++) \
@@ -32,5 +30,19 @@ using namespace std;
 int main()
 {
     fastaf;
+    string stones;
+    int t;
+    int res = 0;
+    get(t);
+    get(stones);
+
+    for (int i = 1; i < t; i++)
+    {
+        if (stones[i] == stones[i - 1])
+            res++;
+    }
+
+    cout << res;
+
     return 0;
 }
