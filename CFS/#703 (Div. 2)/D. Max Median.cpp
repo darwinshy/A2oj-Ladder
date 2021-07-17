@@ -11,7 +11,7 @@
 #include <cmath>
 #include <iostream>
 #include <stdint.h>
-#include <unordered_map>
+
 using namespace std;
 #define ll long long int
 #define pll pair<ll, ll>
@@ -39,5 +39,12 @@ using namespace std;
 int main()
 {
     fastaf;
+    int t;
+    get(t);
+
+    while (t--)
+    {
+    }
+
     return 0;
 }

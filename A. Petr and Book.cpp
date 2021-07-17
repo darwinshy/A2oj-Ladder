@@ -7,11 +7,6 @@
 #include <stdio.h>
 #include <list>
 #include <math.h>
-#include <set>
-#include <cmath>
-#include <iostream>
-#include <stdint.h>
-#include <unordered_map>
 using namespace std;
 #define ll long long int
 #define pll pair<ll, ll>
@@ -39,5 +34,23 @@ using namespace std;
 int main()
 {
     fastaf;
+    int t, ar[7], i = 0;
+    get(t);
+
+    fora(j, 7) get(ar[j]);
+
+    while (t > 0)
+    {
+        if (i == 7)
+        {
+            i = 0;
+            continue;
+        }
+        t = t - ar[i];
+        i++;
+    }
+
+    cout << i;
+
     return 0;
 }

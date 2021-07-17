@@ -11,7 +11,7 @@
 #include <cmath>
 #include <iostream>
 #include <stdint.h>
-#include <unordered_map>
+
 using namespace std;
 #define ll long long int
 #define pll pair<ll, ll>
@@ -38,6 +38,37 @@ using namespace std;
 
 int main()
 {
-    fastaf;
+    long long t, n, flag;
+    cin >> t;
+    while (t--)
+    {
+        cin >> n;
+        long long a[n];
+        for (int i = 0; i < n; i++)
+        {
+            cin >> a[i];
+        }
+        flag = 0;
+        for (long long i = 0; i < n - 1; i++)
+        {
+            if (a[i] > i)
+            {
+                a[i + 1] += a[i] - i;
+                a[i] = i;
+            }
+        }
+        for (long long i = 0; i < n - 1; i++)
+        {
+            if (a[i] >= a[i + 1])
+            {
+                cout << "NO" << endl;
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 0)
+            cout << "YES" << endl;
+    }
+
     return 0;
 }

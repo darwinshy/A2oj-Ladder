@@ -7,11 +7,6 @@
 #include <stdio.h>
 #include <list>
 #include <math.h>
-#include <set>
-#include <cmath>
-#include <iostream>
-#include <stdint.h>
-#include <unordered_map>
 using namespace std;
 #define ll long long int
 #define pll pair<ll, ll>
@@ -39,5 +34,16 @@ using namespace std;
 int main()
 {
     fastaf;
+    double s1, s2, s3;
+    cin >> s1 >> s2 >> s3;
+
+    double a, b, c;
+
+    a = sqrt(s1 * s2 / s3);
+    b = sqrt(s1 * s3 / s2);
+    c = sqrt(s2 * s3 / s1);
+
+    cout << (a + b + c) * 4;
+
     return 0;
 }

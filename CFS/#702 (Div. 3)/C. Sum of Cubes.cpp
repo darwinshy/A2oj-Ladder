@@ -11,7 +11,7 @@
 #include <cmath>
 #include <iostream>
 #include <stdint.h>
-#include <unordered_map>
+
 using namespace std;
 #define ll long long int
 #define pll pair<ll, ll>
@@ -39,5 +39,25 @@ using namespace std;
 int main()
 {
     fastaf;
+    bool flag = false;
+    int64_t t, N;
+    get(t);
+    while (t--)
+    {
+        get(N);
+        flag = false;
+        for (int64_t i = 1; i <= (int64_t)cbrtl(N / 2); i++)
+        {
+            if (!(cbrtl(N - i * i * i) - (int64_t)cbrtl(N - i * i * i)))
+            {
+                flag = true;
+                break;
+            }
+        }
+        if (flag)
+            YES;
+        else
+            NO;
+    }
     return 0;
 }

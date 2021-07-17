@@ -7,11 +7,6 @@
 #include <stdio.h>
 #include <list>
 #include <math.h>
-#include <set>
-#include <cmath>
-#include <iostream>
-#include <stdint.h>
-#include <unordered_map>
 using namespace std;
 #define ll long long int
 #define pll pair<ll, ll>

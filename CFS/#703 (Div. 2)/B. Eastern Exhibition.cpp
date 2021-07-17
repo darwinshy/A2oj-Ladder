@@ -11,7 +11,7 @@
 #include <cmath>
 #include <iostream>
 #include <stdint.h>
-#include <unordered_map>
+
 using namespace std;
 #define ll long long int
 #define pll pair<ll, ll>
@@ -39,5 +39,53 @@ using namespace std;
 int main()
 {
     fastaf;
+    int t;
+    get(t);
+
+    while (t--)
+    {
+        ll *arr, *arr1, *hash, mx, my;
+        double a = 0, b = 0;
+        vector<ll> distance;
+        int n, i = 0, j = 0, k = 0;
+        get(n);
+
+        arr = new ll[n];
+        arr1 = new ll[n];
+        hash = new ll[n];
+
+        fora(i, n)
+        {
+            get(arr[i]);
+            a = a + arr[i];
+            get(arr1[i]);
+            b = b + arr1[i];
+            hash[i] = 0;
+        }
+        mx = *max_element(arr, arr + n);
+        my = *max_element(arr1, arr1 + n);
+
+        a = (a / n);
+        b = (b / n);
+
+        ll c = max(mx, my);
+        // cout << c << "|";
+        cout << a << " " << b << "|| ";
+        for (ll i = 0; i < c; i++)
+        {
+            for (ll j = 0; j < c; j++)
+            {
+                double x = (abs(i - a) + abs(j - b));
+                distance.push_back(x);
+                cout << x << "|";
+            }
+        }
+        cout << "\n";
+
+        // ll minD = *min_element(distance.begin(), distance.end());
+
+        // cout << minD << "\n";
+    }
+
     return 0;
 }
